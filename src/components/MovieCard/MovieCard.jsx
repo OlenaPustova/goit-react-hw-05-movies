@@ -1,7 +1,7 @@
 // import { useEffect, useState } from 'react';
 // import Cast from 'components/Cast/Cast';
 // import Reviews from 'components/Reviews/Reviews';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 // import { getSerchedMovieById } from 'utils/moviesApi';
 import s from './MovieCard.module.scss';
 
