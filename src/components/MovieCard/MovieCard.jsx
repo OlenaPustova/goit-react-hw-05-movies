@@ -1,15 +1,14 @@
 // import { useEffect, useState } from 'react';
 // import Cast from 'components/Cast/Cast';
 // import Reviews from 'components/Reviews/Reviews';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
 // import { getSerchedMovieById } from 'utils/moviesApi';
 import s from './MovieCard.module.scss';
 
 const BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
 export default function MovieCard({ movieId, movie }) {
-  console.log(movie);
-  console.log(movieId);
+  // const location = useLocation;
   const { poster_path, title, overview, genres, release_date, vote_average } =
     movie;
   const year = release_date.split('').splice(0, 4).join('');
@@ -50,7 +49,6 @@ export default function MovieCard({ movieId, movie }) {
               Cast
             </NavLink>
           </li>
-
           <li>
             <NavLink
               to={`/movies/${movieId}/reviews`}

@@ -21,7 +21,7 @@ export default function MovieDetailsPage() {
   }, [movieId]);
   return (
     <>
-      <BtnGoBack />
+      <BtnGoBack title={'Go Back'} />
       {movie && <MovieCard movieId={movieId} movie={movie} />}
     </>
   );

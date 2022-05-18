@@ -7,7 +7,7 @@ import 'modern-normalize/modern-normalize.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   //<React.StrictMode>
-  <BrowserRouter>
+  <BrowserRouter basename="/your_repo_name/">
     <App />
   </BrowserRouter>
   //</React.StrictMode>

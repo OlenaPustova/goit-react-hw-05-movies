@@ -28,6 +28,8 @@ export default function MoviesPage() {
   const [movies, setMovies] = useState([]);
   // const [query, setQuery] = useState('');
 
+  console.log(location);
+
   const search = new URLSearchParams(location.search);
   const query = search.get('query');
 
@@ -47,7 +49,7 @@ export default function MoviesPage() {
   return (
     <>
       <SearchForm />
-      {movies.length > 0 && <MoviesList movies={movies} />}
+      {movies.length > 0 && <MoviesList movies={movies} location={location} />}
     </>
   );
 }
