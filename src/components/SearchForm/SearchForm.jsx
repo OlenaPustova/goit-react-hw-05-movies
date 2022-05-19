@@ -14,9 +14,7 @@ export default function SearchForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // setQuery(input);
 
-    // '/movies?query=';
     navigate({
       pathname: '/movies',
       search: 'query=' + input,

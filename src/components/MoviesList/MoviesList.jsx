@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import s from './MoviesList.module.scss';
 
 export default function MoviesList({ movies, location }) {
-  // console.log(movies);
+  // const location = useLocation();
+  // console.log(location);
   return (
     <ul className={s.list}>
       {movies.map(item => (

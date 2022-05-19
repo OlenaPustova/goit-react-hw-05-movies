@@ -29,12 +29,12 @@ export const getSerchedMovieCast = id => {
   axios.defaults.params = {
     api_key: API_KEY,
   };
-  return axios.get(`/movie/${id}/cast`).then(({ data }) => data);
+  return axios.get(`/movie/${id}/credits`).then(({ data }) => data);
 };
 
 export const getSerchedMovieReview = id => {
   axios.defaults.params = {
     api_key: API_KEY,
   };
-  return axios.get(`/movie/${id}/review`).then(({ data }) => data);
+  return axios.get(`/movie/${id}/reviews`).then(({ data }) => data);
 };

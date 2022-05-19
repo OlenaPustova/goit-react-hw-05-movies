@@ -2,6 +2,8 @@
   display: flex;
 }
 .info {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   border-top: 1px solid #808080;
   border-bottom: 1px solid #808080;

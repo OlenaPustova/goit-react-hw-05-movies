@@ -6,7 +6,6 @@ export default function BtnGoBack({ title }) {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    console.log(navigate);
     navigate(location.state || '/');
   };
   return (

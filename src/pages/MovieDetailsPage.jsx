@@ -15,7 +15,6 @@ export default function MovieDetailsPage() {
     getSerchedMovieById(movieId)
       .then(data => {
         setMovie(data);
-        // console.log(data);
       })
       .catch(error => error);
   }, [movieId]);

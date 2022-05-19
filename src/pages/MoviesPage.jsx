@@ -1,22 +1,3 @@
-// import SearchedMovies from 'components/SearchedMovies/SearchedMovies';
-// import SearchForm from 'components/SearchForm/SearchForm';
-// import MoviesSearchForm from 'components/SearchForm/SearchForm';
-// import { useParams } from 'react-router-dom';
-
-// export default function MoviesPage() {
-//   const { params } = useParams();
-//   // console.log(params);
-
-//   return (
-//     <>
-//  {/* <MoviesSearchForm /> */}
-// {/* <SearchForm /> */}
-
-// {/* <SearchedMovies /> */}
-// </>
-// );
-// }
-
 import MoviesList from 'components/MoviesList/MoviesList';
 import SearchForm from 'components/SearchForm/SearchForm';
 import { useEffect, useState } from 'react';
@@ -26,14 +7,15 @@ import { getSerchedMovie } from 'utils/moviesApi';
 export default function MoviesPage() {
   const location = useLocation();
   const [movies, setMovies] = useState([]);
-  // const [query, setQuery] = useState('');
 
-  console.log(location);
+  // console.log(location);
 
   const search = new URLSearchParams(location.search);
+  // console.log(search);
   const query = search.get('query');
 
   useEffect(() => {
+    // console.log(query);
     if (query === '') {
       return;
     }
