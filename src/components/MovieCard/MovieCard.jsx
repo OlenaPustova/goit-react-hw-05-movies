@@ -2,6 +2,7 @@ import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import image from '../../images/no-img.png';
 
 import s from './MovieCard.module.scss';
+import PropTypes from 'prop-types';
 
 const BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
@@ -47,3 +48,8 @@ export default function MovieCard({ movieId, movie }) {
     </>
   );
 }
+
+MovieCard.propTypes = {
+  movieId: PropTypes.string.isRequired,
+  movie: PropTypes.object.isRequired,
+};

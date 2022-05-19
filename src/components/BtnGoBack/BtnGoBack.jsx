@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import s from './BtnGoBack.module.scss';
+import PropTypes from 'prop-types';
 
 export default function BtnGoBack({ title }) {
   const location = useLocation();
@@ -14,3 +15,7 @@ export default function BtnGoBack({ title }) {
     </button>
   );
 }
+
+BtnGoBack.propTypes = {
+  title: PropTypes.string.isRequired,
+};
