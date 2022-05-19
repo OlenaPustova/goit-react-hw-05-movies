@@ -1,10 +1,7 @@
 import MoviesList from 'components/MoviesList/MoviesList';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-// import { useLocation, useParams } from 'react-router-dom';
 import { getTrendsMovies } from 'utils/moviesApi';
-// import s from '../MoviesTrend';
-// import s from './MoviesTrend.module.scss';
 
 export default function MoviesTrend() {
   const location = useLocation();

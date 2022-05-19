@@ -7,9 +7,6 @@ import { getSerchedMovieById } from 'utils/moviesApi';
 export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
-  // const location = useLocation();
-  // console.log(movieId);
-  // console.log(movieId.id);
 
   useEffect(() => {
     getSerchedMovieById(movieId)

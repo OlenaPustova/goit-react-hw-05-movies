@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getSerchedMovieCast } from 'utils/moviesApi';
 import s from './Cast.module.scss';
+import image from '../../images/no-img.png';
 
 const BASE_URL = 'https://image.tmdb.org/t/p/w500/';
 
 export default function Cast() {
-  const [cast, setCast] = useState();
+  const [cast, setCast] = useState(null);
   const movieId = useParams().movieId;
 
   useEffect(() => {
@@ -25,10 +26,9 @@ export default function Cast() {
           {cast.map(item => (
             <li key={item.id} className={s.actor}>
               <img
-                src={BASE_URL + item.profile_path}
+                src={item.profile_path ? BASE_URL + item.profile_path : image}
                 alt={item.name}
                 width="200"
-                height="300"
               />
               <p>{item.name}</p>
               <p>Character: {item.character}</p>

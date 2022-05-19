@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-// import HomePage from 'components/HomePage/HomePage';
 import s from './Navigations.module.scss';
 
 export default function Navigations() {

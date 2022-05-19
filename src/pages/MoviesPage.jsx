@@ -8,26 +8,20 @@ export default function MoviesPage() {
   const location = useLocation();
   const [movies, setMovies] = useState([]);
 
-  // console.log(location);
-
   const search = new URLSearchParams(location.search);
-  // console.log(search);
   const query = search.get('query');
 
   useEffect(() => {
-    // console.log(query);
-    if (query === '') {
+    if (!query) {
       return;
     }
     getSerchedMovie(query)
       .then(data => {
         setMovies(data.results);
-        // console.log(data);
       })
       .catch(error => error);
   }, [query]);
 
-  // console.log(movies);
   return (
     <>
       <SearchForm />

@@ -16,7 +16,7 @@ export const getSerchedMovie = query => {
     api_key: API_KEY,
     query: query,
   };
-  return axios.get(`/search/movie/`).then(({ data }) => data);
+  return axios.get(`/search/movie`).then(({ data }) => data);
 };
 
 export const getSerchedMovieById = id => {

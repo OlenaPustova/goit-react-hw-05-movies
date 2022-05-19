@@ -1,12 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import { getSerchedMovie } from 'utils/moviesApi';
-import s from './SearchForm.module.scss';
 
 export default function SearchForm() {
   const navigate = useNavigate();
   const [input, setInput] = useState('');
-  // let id = 255;
 
   const handleChange = e => {
     setInput(e.target.value);
@@ -27,14 +24,8 @@ export default function SearchForm() {
   };
 
   return (
-    <form className={s.form} onSubmit={handleSubmit}>
-      <input
-        value={input}
-        type="text"
-        name="search"
-        className={s.input}
-        onChange={handleChange}
-      />
+    <form onSubmit={handleSubmit}>
+      <input value={input} type="text" name="search" onChange={handleChange} />
       <button type="submit" className="button">
         Search
       </button>
